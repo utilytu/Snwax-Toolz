@@ -7,10 +7,10 @@
 import requests
 import time
 from colorama import Fore, Style
-API_KEY = '73a4e5a3d8a1dbb997ee08b91a5dc6d6'  # Your actual API key
+API_KEY = '73a4e5a3d8a1dbb997ee08b91a5dc6d6'  
 BASE_URL = 'http://apilayer.net/api/validate'
 def validate_phone_number(phone_number):
-    # Basic validation: phone number should start with + and be digits after
+   
     return phone_number.startswith('+') and phone_number[1:].isdigit()
 def number_lookup():
     print(Fore.YELLOW + "\n--- Number Lookup ---\n" + Style.RESET_ALL)
@@ -20,18 +20,18 @@ def number_lookup():
             break
         else:
             print(Fore.RED + "Invalid phone number format. Please enter a valid phone number starting with '+'." + Style.RESET_ALL)
-    # Make the request to the Numverify API
+    
     params = {
         'access_key': API_KEY,
         'number': phone_number,
-        'format': 1  # JSON format
+        'format': 1  
     }
     print(Fore.YELLOW + "\nLooking up information...\n" + Style.RESET_ALL)
     try:
         response = requests.get(BASE_URL, params=params)
         data = response.json()
         if data.get('valid'):
-            # Display the lookup information
+           
             print(Fore.GREEN + "Phone Number Lookup Result:\n" + Style.RESET_ALL)
             print(f"Phone Number: {data['number']}")
             print(f"Country Code: {data['country_code']}")
