@@ -7,7 +7,7 @@
 import requests
 from colorama import Fore, Style
 def email_lookup(email):
-    url = f"https://api.hunter.io/v2/email-verifier?email={email}&api_key={RLADDD}"
+    url = f"your api little nege"
     response = requests.get(url)
     data = response.json()
     if response.status_code == 200:
