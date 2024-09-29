@@ -7,7 +7,7 @@
 import requests
 import time
 from colorama import Fore, Style
-API_KEY = '73a4e5a3d8a1dbb997ee08b91a5dc6d6'  
+API_KEY = 'your api key litlle nege'  
 BASE_URL = 'http://apilayer.net/api/validate'
 def validate_phone_number(phone_number):
    
